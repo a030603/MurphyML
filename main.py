@@ -2,15 +2,32 @@
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import dataclasses
+from dataclasses import dataclass
+from bb import *
+
+import torch
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+@dataclass
+class TestDto:
+    _name: str
+    count: int
+    status: str = 'PENDING'
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        self._name = name
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    dto = TestDto('name', 213)
+    dto.name = 'aa'
+    print(vars(dto))
+    print(dataclasses.asdict(dto))
+    echo2('aa')
+    bbb.echo('bb')
