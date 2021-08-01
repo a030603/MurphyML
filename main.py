@@ -4,7 +4,8 @@
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 import dataclasses
 from dataclasses import dataclass
-from bb import *
+
+import simplejson as simplejson
 
 import torch
 
@@ -29,5 +30,3 @@ if __name__ == "__main__":
     dto.name = 'aa'
     print(vars(dto))
     print(dataclasses.asdict(dto))
-    echo2('aa')
-    bbb.echo('bb')
