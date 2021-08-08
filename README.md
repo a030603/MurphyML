@@ -54,6 +54,17 @@ Specify requirements in requirements.in file. Then run following command to upda
 
 
 
+# Tests
+
+We use pytest for unit testing. Use following commands to run tests.
+
+``` 
+pytest # run all tests.
+pytest -q test/sample_test.py # run tests in specific module.
+pytest -q test/sample_test.py -k test_sample # run specific test case.
+```
+
+
 # ML Framework
 
 We used Pytorch for ML research. 
