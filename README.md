@@ -60,8 +60,10 @@ We use pytest for unit testing. Use following commands to run tests.
 
 ``` 
 pytest # run all tests.
-pytest -q test/sample_test.py # run tests in specific module.
-pytest -q test/sample_test.py -k test_sample # run specific test case.
+pytest test # run all tests in specific package.
+pytest test/sample_test.py # run tests in specific module.
+pytest test/sample_test.py -k test_sample # run specific test case.
+pytest test/sample_test.py::SampleTest::test_sample # run specific test case.
 ```
 
 
