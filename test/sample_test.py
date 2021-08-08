@@ -1,6 +1,7 @@
 import unittest
 
 
+# unittest sample
 class SampleTest(unittest.TestCase):
 
     def test_sample(self):
@@ -11,6 +12,11 @@ class SampleTest(unittest.TestCase):
         fullStr = f"\u0394\u2341{subStr}"
 
         self.assertEqual(type(fullStr), str)
+
+
+# pytest sample
+def test_sample2():
+    assert 1 < 2
 
 
 if __name__ == '__main__':
