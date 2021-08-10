@@ -54,10 +54,10 @@ def test_deepcopy():
 
 
 def test_shallow_copy():
-    x = np.random.rand(2, 2)
+    x = np.random.rand(4, 5)
     y = x.view()
 
-    y += np.array([1, 1])
+    y += 1  # y + 1 returns new array
 
     assert np.array_equal(x, y)
 
