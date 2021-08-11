@@ -62,5 +62,29 @@ def test_shallow_copy():
     assert np.array_equal(x, y)
 
 
-if __name__ == '__main__':
-    unittest.main()
+def test_array_indexing():
+    x = np.array([[1, 2], [3, 4]])
+    rows = np.array([0, 1])
+    cols = np.array([0, 1])
+
+    actual = x[rows, cols]
+    expected = np.array([1, 4])
+
+    assert np.array_equal(actual, expected)
+
+
+def test_array_indexing2():
+    x = np.array([[0, 1, 2],
+                  [3, 4, 5],
+                  [6, 7, 8],
+                  [9, 10, 11]])
+    rows = np.array([[0, 0],
+                     [3, 3]])
+    cols = np.array([[0, 2],
+                     [0, 2]])
+
+    actual = x[rows, cols]
+    expected = np.array([[0, 2],
+                         [9, 11]])
+
+    assert np.array_equal(actual, expected)
