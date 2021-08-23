@@ -1,5 +1,3 @@
-import unittest
-
 import numpy as np
 
 
@@ -88,3 +86,17 @@ def test_array_indexing2():
                          [9, 11]])
 
     assert np.array_equal(actual, expected)
+
+
+def test_transpose_2x2():
+    x = np.array([[1, 2], [3, 4]])
+    y = np.array([[1, 3], [2, 4]])
+
+    assert np.array_equal(x.transpose(), y)
+
+
+def test_transpose_2x2x2():
+    x = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+    y = np.array([[[1, 3], [5, 7]], [[2, 4], [6, 8]]])
+
+    assert np.array_equal(x.transpose((2, 0, 1)), y)
