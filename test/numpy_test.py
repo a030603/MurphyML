@@ -8,8 +8,14 @@ def test_array_sum():
 
     assert np.array_equal(array1 + array2, array3)
 
-
 def test_array_argmax():
+    x = np.array([3, 2, 4, 1])
+
+    actual = x.argmax(axis=0)
+
+    assert actual == 2
+
+def test_array_argmax2():
     array = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]], [[9, 10], [11, 12]]])
 
     actual = array.argmax(axis=0)
