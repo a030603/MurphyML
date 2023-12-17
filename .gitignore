@@ -27,7 +27,7 @@ bin/
 .installed.cfg
 *.egg
 MANIFEST
-requirements.in
+requirements.txt
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
