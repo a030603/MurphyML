@@ -5,11 +5,6 @@
 import dataclasses
 from dataclasses import dataclass
 
-import simplejson as simplejson
-
-import torch
-
-
 @dataclass
 class TestDto:
     _name: str
