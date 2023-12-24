@@ -68,7 +68,7 @@ def test_shallow_copy():
     assert np.array_equal(x, y)
 
 
-def test_array_indexing():
+def test_array_reference():
     x = np.array([[1, 2], [3, 4]])
     rows = np.array([0, 1])
     cols = np.array([0, 1])
@@ -79,7 +79,7 @@ def test_array_indexing():
     assert np.array_equal(actual, expected)
 
 
-def test_array_indexing2():
+def test_array_reference2():
     x = np.array([[0, 1, 2],
                   [3, 4, 5],
                   [6, 7, 8],
@@ -92,6 +92,16 @@ def test_array_indexing2():
     actual = x[rows, cols]
     expected = np.array([[0, 2],
                          [9, 11]])
+
+    assert np.array_equal(actual, expected)
+
+
+def test_array_reference3():
+    x = np.array([[1, 2], [3, 4]])
+    rows = np.array([1, 0])
+
+    actual = x[rows]
+    expected = np.array([[3, 4], [1, 2]])
 
     assert np.array_equal(actual, expected)
 
