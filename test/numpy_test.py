@@ -132,3 +132,11 @@ def test_filter_by_predicate():
     y = x[x % 2 == 0]
 
     assert np.array_equal(y, [2, 4, 6, 8])
+
+
+def test_flatten_then_reshape():
+    x = np.array([[1, 2, 3], [4, 5, 6]])
+    y = x.flatten()
+    y2 = y.reshape(2, 3)
+
+    assert np.array_equal(x, y2)
