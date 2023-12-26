@@ -140,3 +140,13 @@ def test_flatten_then_reshape():
     y2 = y.reshape(2, 3)
 
     assert np.array_equal(x, y2)
+
+
+def test_random_choice_with_masking():
+    x = np.random.randn(100)
+    mask = np.random.choice(100, 10)
+    y = x[mask]
+
+    assert y.shape == (10,)
+    for i, e in enumerate(mask):
+        assert y[i] == x[e]
